@@ -1,0 +1,99 @@
+<div class="row-fluid">
+
+    <form class="form-horizontal span12">
+
+        <fieldset>
+
+            <legend>Detalles del Usuario</legend>
+            <br/>
+
+            <div class="row">
+                <div class="span8">
+
+                    <div class="control-group">
+                        <label for="wineId" class="control-label">Id:</label>
+
+                        <div class="controls">
+                            <input id="wineId" name="id" type="text" value="<%= _id === null ? '' : _id %>"
+                                   disabled/>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="nombre" class="control-label">Nombre:</label>
+
+                        <div class="controls">
+                            <input type="text" id="nombre" name="nombre" value="<%= nombre %>"/>
+                            <span class="help-inline"></span>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="email" class="control-label">Email:</label>
+
+                        <div class="controls">
+                            <input type="text" id="email" name="email" value="<%= email %>"/>
+                            <span class="help-inline"></span>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="direccion" class="control-label">Direccion:</label>
+
+                        <div class="controls">
+                            <input type="text" id="direccion" name="direccion" value="<%= direccion %>"/>
+                            <span class="help-inline"></span>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="telefono" class="control-label">Telefono:</label>
+
+                        <div class="controls">
+                            <input type="text" id="telefono" name="telefono" value="<%= telefono %>"/>
+                        </div>
+                    </div>
+
+                   <div class="control-group">
+                        <label for="celular" class="control-label">Celular:</label>
+
+                        <div class="controls">
+                            <input type="text" id="celular" name="celular" value="<%= celular %>"/>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+
+                <div class="span4">
+                    <div id="draggable-images" class="well" style="width: 180px;text-align: center;width:50%;margin: 0px auto;">
+                        <p><img id="picture" width="180" src="<%= picture === null ? 'pics/generic.jpg' : 'pics/' + picture %>" >
+						</img></p>
+                        <p style="color:#999;">Para cambiar la foto arrastre una nueva imagen</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </fieldset>
+
+        <div class="form-actions">
+            <a href="#" class="btn btn-primary save">Guardar</a>
+			<a href="#" class="<%= _id === null ? 'btn ':'btn delete' %>">
+				<%= _id === null ? 'Cancelar ':'Borrar' %>
+			</a>
+           
+        </div>
+
+    </form>
+
+</div>
+
+<div class="row-fluid status-bar">
+    <div class="span12">
+        <div class="alert alert-success" style="display: none">
+            <b>Success!</b> Usuario guardado exitosamente
+        </div>
+    </div>
+</div>
